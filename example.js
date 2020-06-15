@@ -32,3 +32,31 @@ function fetchData() {
 }
 
 fetchData();
+
+function postData() {
+  fetch("https://reqres.in/api/users", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({
+      name: "morpheus",
+      job: "leader",
+    }),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw Error("ERROR");
+      }
+
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
+postData();
