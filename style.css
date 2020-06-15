@@ -1,0 +1,8 @@
+.user {
+  border: 1px solid black;
+  font-size: 1.6rem;
+  background-color: lightgray;
+  padding: 1rem;
+  margin: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
